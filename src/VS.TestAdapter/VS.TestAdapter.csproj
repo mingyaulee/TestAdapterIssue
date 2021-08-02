@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <LangVersion>9</LangVersion>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TestProject>false</TestProject>
+    <IsTestProject>false</IsTestProject>
+  </PropertyGroup>
+
+  <!-- Reference to Microsoft.NET.Test.Sdk but remove the linked content and test container project capability -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" PrivateAssets="contentfiles" />
+    <ProjectCapability Remove="TestContainer" />
+    <Content Remove="@(Content)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestAdapterCore\TestAdapterCore.csproj" PrivateAssets="contentfiles" />
+  </ItemGroup>
+
+</Project>

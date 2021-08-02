@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TestAdapterCore\TestAdapterCore.csproj" />
+    <ProjectReference Include="..\..\src\VS.TestAdapter\VS.TestAdapter.csproj" />
+    <ProjectReference Include="..\AProjectWithTests\AProjectWithTests.csproj" />
+  </ItemGroup>
+  
+</Project>
